@@ -35,6 +35,43 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
             </div>
+            <a style="color: white;" href="" data-toggle="modal" data-target="#loginModal">Login</a>
+        </div>
+        <div id="loginModal" role="dialog" class="modal fade">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputEmail3" class="sr-only">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputPassword3" class="sr-only">Password</label>
+                                    <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                        placeholder="Password">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button class="btn btn-secondary btn-sm ml-auto" type="button" data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-primary btn-sm ml-1" type="submit">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
     <header class="jumbotron">
@@ -45,11 +82,12 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
                         lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
                 </div>
-            </div>
-            <div class="col-12 col-sm align-self-center">
-                <img src="img/logo.png" class="img-fluid">
+                <a href="#reverseform" role="button" data-toggle="tooltip" data-html="true"
+                    title="Or call us at <br><strong>+852 12345678</strong>" class="btn btn-block nav-link btn-warning"
+                    data-placement="bottom">Reverse Table</a>
             </div>
         </div>
     </header>
@@ -63,7 +101,8 @@
                 <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
                 <div class="media-body">
                     <h2 class="mt-0">
-                        Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span>
+                        Uthappizza <span class="badge badge-danger">HOT</span> <span
+                            class="badge badge-pill badge-secondary">$4.99</span>
                     </h2>
                     <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza,
                         topped with Cerignola
@@ -95,7 +134,8 @@
                 <div class="media-body">
                     <h2 class="mt-0">Alberto Somayya</h2>
                     <h4>Executive Chef</h4>
-                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely
+                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
+                        experience having worked closely
                         with
                         whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
                         experiences. </p>
@@ -154,7 +194,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
