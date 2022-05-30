@@ -50,10 +50,16 @@ body {
 }
 
 .carousel-item {
-	height: 900px;
+	height: 600px;
 }
 
 .carousel-item img {
 	min-height: 100%;
 	margin: auto;
+	width: 80%;
+}
+
+#carouselButton {
+	margin: auto;
+	z-index: 1;
 }

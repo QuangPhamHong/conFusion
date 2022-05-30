@@ -142,6 +142,17 @@
             </div><!-- end col-->
         </div>
 
+        <div class="row">
+            <div class="btn-group" id="carouselButton">
+                <button class="btn btn-danger btn-sm carousel-pause">
+                    <span class="fa fa-pause"></span>
+                </button>
+                <button class="btn btn-danger btn-sm carousel-play">
+                    <span class="fa fa-play"></span>
+                </button>
+            </div>          
+        </div>
+
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -197,9 +208,9 @@
                 </div>
             </div>
         </div>
-        <!-- form reserver -->
 
-        <div class="bg-white" id="mymodal">
+        <!-- form reserver -->
+        <div class="bg-white collapse" id="mymodal">
             <div style="padding: 15px;" class="col-12 col-sm-8">
                 <form>
                     <div class="card-header bg-warning">
@@ -223,21 +234,6 @@
                                     value="option3">
                                 <label for="inlineRadio3" class="form-check-label">3</label>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio4"
-                                    value="option4">
-                                <label for="inlineRadio4" class="form-check-label">4</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio5"
-                                    value="option5">
-                                <label for="inlineRadio5" class="form-check-label">5</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio6"
-                                    value="option6">
-                                <label for="inlineRadio6" class="form-check-label">6</label>
-                            </div>
                         </div>
                         <div class="form-group row">
                             <label class="form-check-label col-sm-3">date and time</label>
@@ -252,8 +248,7 @@
                     </div>
                 </form>
             </div>
-        </div>
-
+        </div>      
     </div>
 
     <footer class="footer">
@@ -310,6 +305,17 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#myCarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#myCarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#myCarousel").carousel('cycle');
+            });
         });
     </script>
 </body>
