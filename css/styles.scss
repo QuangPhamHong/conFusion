@@ -72,3 +72,16 @@ body {
 	margin: auto;
 	z-index: 1;
 }
+
+.modal-header{
+	background-color: $background-dark;
+	color: floralwhite;
+}
+
+.modal-body{
+	background-color: $background-pale;
+}
+
+.close{
+	color: floralwhite;
+}
