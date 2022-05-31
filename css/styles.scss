@@ -3,7 +3,7 @@ $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
 // Height variables
-$carousel-item-height: 300px;
+$carousel-item-height: 600px;
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
     margin: 0px auto;
@@ -59,17 +59,16 @@ body {
     .carousel-item {
         height: $carousel-item-height;
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-height: 300px;
+			position: absolute;
+			left: 10%;
+            
+            min-height: 600px;
+			width: 80%;
         }
     }
 }
 
 #carouselButton {
-    right: 0px;
-    position: absolute;
-	bottom: 0px;
+	margin: auto;
 	z-index: 1;
 }
